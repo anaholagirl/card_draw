@@ -4,6 +4,10 @@ def card_draw(score)
 	card_values.each do |card, value|
 		if score == value
 			card_drawn.push(card)
+			score = score - value
+		elsif score >= value
+			card_drawn.push(card)
+			score = score - value
 		end
 	end
 	return card_drawn
