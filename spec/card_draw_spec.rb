@@ -9,4 +9,8 @@ describe('card_draw') do
 	it('will take the total card score given for two cards and determine what cards were drawn') do
 		expect(card_draw(1032)).to(eq(["Queen", 5]))
 	end
+
+	it('will take the total card score for multiple cards and determine what cards were drawn') do
+		expect(card_draw(6289)).to(eq(["Ace", "King", 9, 6, 2]))
+	end
 end
